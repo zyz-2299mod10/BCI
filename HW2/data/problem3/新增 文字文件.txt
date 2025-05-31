@@ -1,0 +1,6 @@
+plot(time, ACERP, 'b', 'LineWidth', 2); hold on;
+plot(time, AWERP, 'r', 'LineWidth', 2);
+>> xlabel("ms")
+>> ylabel("Amplitude")
+>> legend('FeedBack\_correct', 'FeedBack\_wrong');
+grid on;

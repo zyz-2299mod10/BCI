@@ -1,0 +1,13 @@
+# config training scheme, mode, hyperparam
+eegmodel = SCCNet # function alias, should be EEGNet, SCCNet, SCCNet_v2
+kwargs = dict(Nt=22, Nc=20, fs=125.0, dropoutRate=0.5) # custom args for different EEG model
+#kwargs = dict(kernLength=32, F1=16, F2=32, D=2, dropoutRate=0.2) # for EEGNet
+scheme = "all"  # "all", "easy"
+easy_list = ["01", "02", "03", "04"]  #TODO: Modify this list!!! Put the easy subject id here ex. ["01", "02" ......]
+epochs = 350
+batch_size = 64
+lr = 1e-4
+savepath = "/content/checkpoints/"
+os.makedirs(savepath, exist_ok=True)
+
+subject_id = "01"
